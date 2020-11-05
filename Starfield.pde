@@ -45,16 +45,15 @@ class Particle{
 class OddballParticle //inherits from Particle
 {
   OddballParticle() {
-  x = 400;
-  y = 400;
+  x = y = 200;
   }
   void draw() {
-  x = y + Math.random()*1-0.5;
-  x = y + Math.random()*1-0.5;
-  
+  x = x + Math.random()*1-0.5;
+  y = y + Math.random()*1-0.5;
+  }
   void show() {
   fill(0,255,0);
   noStroke();
-  rect(400,400,40,20);
+  rect(x,y,40,20);
   }
 }
