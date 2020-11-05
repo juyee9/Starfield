@@ -4,7 +4,7 @@ void setup() {
 size(800,800);
 for (int i = 0; i < particle.length; i++){
   particle[i] = new Particle();
-  //particle[0] = new OddballParticle();
+  particle[0] = new OddballParticle();
   }
 }
 void draw(){
@@ -45,7 +45,8 @@ class Particle{
 class OddballParticle //inherits from Particle
 {
   OddballParticle() {
-  x = y = 200;
+  x = 400;
+  y = 400;
   }
   void draw() {
   x = y + Math.random()*1-0.5;
