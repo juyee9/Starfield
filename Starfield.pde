@@ -42,18 +42,21 @@ class Particle{
   float size = map(z, 0, width, 16, 0);
   ellipse(speedX, speedY, size, size);  }
 }
-class OddballParticle //inherits from Particle
+class OddballParticle extends Particle //inherits from Particle
 {
+  float x,y;
   OddballParticle() {
-  x = y = 400;
   }
-  void draw() {
-  x = x + Math.random()*1-0.5;
-  y = y + Math.random()*1-0.5;
-  }
+  void move() {
+  
+      x = x + (int)(Math.random()*5)-1; //right
+      x = x + (int)(Math.random()*5)-3; //left
+      y = y + (int)(Math.random()*5)-1; //right
+      y = y + (int)(Math.random()*5)-3; //left
+    }
   void show() {
-  fill(42);
+  fill(0,255,0);
   noStroke();
-  rect(x,y,40,20);
+  ellipse(x,y,75,75);
   }
 }
